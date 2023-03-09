@@ -3,8 +3,6 @@ clear
 
 # set variables
 #username=$1
-#token=$2
-#repo=$3
 comment=$1
 rama=$2
 source ./VariablesVacias.sh 
@@ -25,14 +23,14 @@ git config --global core.autocrlf false
   read -p "Desea clonar el repositorio? escriba [<Y>] si es asi : " clone
   if [[ $clone =~ ^[Yy]$ ]]
   then
-    git clone git@github.com:CaroVargas21/Infraestructura.git
+    git clone git@github.com:CaroVargas21/proyectoFinal_IAC.git
   fi
   
   read -p "Desea tagear? si es asi marque [<Y>] : " tag
   
   if [[ $tag =~ ^[Yy]$ ]]; then
     echo "Te encuentras parado sobre la rama"; git status
-    read -p "Desea seguir en esta rama? si es así marque [<Y>] : " ramis
+    read -p "Desea seguir en esta rama? si es asï¿½ marque [<Y>] : " ramis
     if [[ $ramis =~ ^[Yy]$ ]]; then
       read -p "Escriba la nomenclatura del tag EJ: (v1.0) : " version
       git tag "$version" #vp min master
